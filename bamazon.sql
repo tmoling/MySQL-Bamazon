@@ -1,16 +1,22 @@
+--drop this in case there is one created
 DROP DATABASE IF EXISTS bamazon_db;
 
+--there isn't, so make one
 CREATE DATABASE bamazon_db;
 
+--load data into selected database
 USE bamazon_db;
 
+--table for database with requested elements
 CREATE TABLE products (
   item_id INTEGER(10) AUTO_INCREMENT NOT NULL,
   product_name VARCHAR(500) NOT NULL,
   department_name VARCHAR(100) NOT NULL,
   price DECIMAL(5,2) NOT NULL,
-  stock_quantity INTEGER NOT NULL);
+  stock_quantity INTEGER NOT NULL,
+  PRIMARY KEY (item_id));
 
+--10 items for sale in the bamazon database
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
 values (49837, 
 'Opened Bottle of Caffiene Pills', 
@@ -71,7 +77,7 @@ INSERT INTO products (item_id, product_name, department_name, price, stock_quant
 values (38111, 
 'Buddy Bands Trademark', 
 'Bayside', 
-1500.00, 
+500.00, 
 8);
 
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
