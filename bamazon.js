@@ -70,9 +70,9 @@ function start() {
     });
 }
 
-// function to handle posting new items up for auction
+// function to handle posting items up for sale
 function customerShop() {
-  // prompt for what customer wants to buy
+  // prompt for what customer wants to buy and how many they would like
   inquirer
     .prompt([
       {
@@ -80,6 +80,7 @@ function customerShop() {
         type: "input",
         message: "Type in the product ID for the item you'd like to buy." + "\n",
         validate: function (value) {
+          //checking for correct number entered
           if (isNaN(value) === false) {
             return true;
           }
@@ -91,6 +92,7 @@ function customerShop() {
         type: "input",
         message: "How many of this item would you like?" + "\n",
         validate: function (value) {
+          //checking for correct quantity added
           if (isNaN(value) === false) {
             return true;
           }
@@ -99,11 +101,11 @@ function customerShop() {
       }
     ])
     .then(function (answer) {
-      // when finished prompting, insert a new item into the db with that info
+      // when finished prompting, insert a new item into the database
       var query = "SELECT * FROM products WHERE ?";
       connection.query(query, { item_id: answer.item }, function (err, res) {
 
-        // This is to check the quanity matches and update the database inventory
+        // this loop is to check if the quanity matches and update the database inventory
         for (var i = 0; i < res.length; i++) {
           console.log("Item ID: " + res[i].item_id + " || Product Name: " + res[i].product_name
             + " || Price: " + res[i].price + " || Stock Quantity: " + res[i].stock_quantity + "\n" + "\n");
@@ -115,6 +117,7 @@ function customerShop() {
           else {
             var orderCost = (res[i].price * answer.amount)
 
+            //console out a purchased item
             console.log("\n" + "========================================")
             console.log("Your purchase is complete." + "\n");
             console.log("The final amount is $" + orderCost + "." + "\n");
