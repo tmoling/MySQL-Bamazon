@@ -19,7 +19,7 @@ CREATE TABLE products (
 --10 items for sale in the bamazon database
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
 values (1, 
-'Opened Bottle of Caffiene Pills', 
+'Opened Bottle of Caffeine Pills', 
 'Powers Residence', 
 15.99, 
 10);

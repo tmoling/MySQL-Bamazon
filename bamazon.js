@@ -25,7 +25,7 @@ table.push(
   , { 'Buddy Bands': ['38111', 'Bayside', '$500.00', '8'] }
   , { 'Rod Belding Rafting Lessons': ['39658', 'Bayside', '$35.99', '30'] }
   , { 'Jar of Screech Spaghetti Sauce': ['48102', 'Bayside', '$7.99', '200'] }
-  , { 'Opened Bottle of Caffiene Pills': ['49837', 'Powers Residence', '$15.99', '10'] }
+  , { 'Opened Bottle of Caffeine Pills': ['49837', 'Powers Residence', '$15.99', '10'] }
   , { 'Tuttle Drivers Ed Car': ['94012', 'Bayside', '$950.25', '28'] }
   , { 'Zack Attack Tickets': ['94817', 'Bayside', '$65.99', '70'] }
 );
