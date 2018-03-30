@@ -1,7 +1,6 @@
-# MySQL-Bamazon
+# Saved By the Bell Store
 
-# BAMazon
-#### Welcome to the "Saved by the Bell" Store
+Welcome to the store.
 
 Buy some of your favorite items from the show like Jessie's caffeine pills, Buddy Bands or a weekend at Malibu Sands.
 
